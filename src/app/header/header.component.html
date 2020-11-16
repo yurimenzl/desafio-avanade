@@ -1,0 +1,18 @@
+
+<div class="row" style="margin-bottom: 2rem;">
+    <div class="col col-lg-2">
+       <img src="./assets/img/gt-avanade.png" alt="">
+    </div>
+    <div class="col col-lg-8" style="margin-top: 3rem;text-align: center;" *ngIf="isSelected; else noElement">
+        <h3>A empresa {{companyName}} teve um faturamento de R$ {{companyProfit | number:'6.1-2'}} no ano de {{ano}}</h3>
+    </div>
+    <ng-template #noElement>
+        <div class="col col-lg-8" style="margin-top: 3rem;">
+            <h3>&nbsp;</h3>
+        </div>
+    </ng-template>
+    <div class="col col-lg-2" style="margin-top: 3rem;">
+       <button mat-raised-button (click)="showElement()">{{buttonName}}</button>
+    </div>
+     
+</div>
